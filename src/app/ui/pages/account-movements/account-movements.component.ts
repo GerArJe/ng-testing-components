@@ -23,7 +23,7 @@ export class AccountMovementsComponent {
     this.getAccountMovements(true);
   }
 
-  getAccountMovements(isFirstLoad?: boolean) {
+  private getAccountMovements(isFirstLoad?: boolean) {
     this.loading = true;
     this._accountMovementsService.getAccountMovements().subscribe({
       next: (accountMovements) => {
